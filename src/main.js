@@ -72,7 +72,7 @@ document.querySelector('#plus').addEventListener('click', () => {
   document.querySelectorAll('button').forEach(button => button.disabled = true);
   document.querySelector('#show').classList.replace('number','loader');
   document.querySelector('#show').innerText = '';
-  contract.increment().then(updateUI);
+  contract.increment({"param": 5}).then(updateUI);
 });
 document.querySelector('#minus').addEventListener('click', () => {
   document.querySelectorAll('button').forEach(button => button.disabled = true);
